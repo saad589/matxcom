@@ -14,10 +14,10 @@ MATXCOM is a specialized program developed for the calculation of x-ray and gamm
 - Energy absorption and exposure buildup factors (EABF and EBF)
 
 ## Installation
-The compiled version of MATXCOM is available in the [Releases](#) section. Simply download the file and follow the installation guide provided in the [User Guide](#).
+The compiled version of MATXCOM is available in the [Releases](https://github.com/saad589/matxcom/releases) section. Simply download the file and follow the installation guide provided in the [User Guide](https://saad589.github.io/matxcom/).
 
 ## Usage
-Download the latest release and follow the input format specified in the [User Guide](#).
+Download the latest release and follow the input format specified in the [User Guide](https://saad589.github.io/matxcom/).
 
 ## Citation
 If you use MATXCOM in your research, please cite the associated publication:
