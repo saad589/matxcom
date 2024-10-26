@@ -1,0 +1,384 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MATXCOM—an x-ray/gamma-ray attenuation calculator for arbitrary materials &#8212; MATXCOM 0.3 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="matxcoman-x-ray-gamma-ray-attenuation-calculator-for-arbitrary-materials">
+<h1>MATXCOM—an x-ray/gamma-ray attenuation calculator for arbitrary materials<a class="headerlink" href="#matxcoman-x-ray-gamma-ray-attenuation-calculator-for-arbitrary-materials" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<a class="reference external image-reference" href="https://creativecommons.org/licenses/by-nd/4.0/"><img alt="https://img.shields.io/badge/License-CC%20BY--ND%204.0-lightgrey.svg" src="https://img.shields.io/badge/License-CC%20BY--ND%204.0-lightgrey.svg" /></a>
+<p>MATXCOM is a specialized program developed for the calculation of x-ray and gamma-ray interaction cross-sections and attenuation parameters for arbitrary materials. Based on the EPICS2023 evaluated photon data library (EPDL), MATXCOM calculates the following properties:</p>
+<ul class="simple">
+<li>Mass attenuation coefficient (MAC)</li>
+<li>Linear attenuation coefficient (LAC)</li>
+<li>Half and tenth value layers (HVL and TVL)</li>
+<li>Mean free path (MFP)</li>
+<li>Total atomic and electronic cross-sections (ACS and ECS)</li>
+<li>Effective atomic number (Z<sub>eff</sub>)</li>
+<li>Effective electron density (N<sub>eff</sub>)</li>
+<li>Effective conductivity (C<sub>eff</sub>)</li>
+<li>Energy absorption and exposure buildup factors (EABF and EBF)</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">MATXCOM Version 0.3 (10 October 2024).</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The current release is Windows-only. For a Linux binary or the source code, please contact the author.</li>
+<li>The front-end of MATXCOM is under development. Expect to see major changes.</li>
+</ul>
+</div>
+<p>This guide provides instructions on how to install, run, and use MATXCOM. It also includes examples to help you get started.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p><strong>Downloading MATXCOM</strong></p>
+<ol class="arabic simple">
+<li>Go to the MATXCOM release page.</li>
+<li>Download the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</li>
+</ol>
+<p><strong>Extracting Files</strong></p>
+<ol class="arabic simple">
+<li>Extract the contents of the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file to a convenient directory on your computer.</li>
+<li>Ensure that the following are in the same directory:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">matxcom.exe</span></code> (the MATXCOM executable)</li>
+<li>Additional directories containing cross-section and library data</li>
+</ul>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not rename any files or directories. Keep the directory structure as it is after extraction.</p>
+</div>
+</div>
+<div class="section" id="running-matxcom">
+<h2>Running MATXCOM<a class="headerlink" href="#running-matxcom" title="Permalink to this headline">¶</a></h2>
+<p>MATXCOM is a command-line program without a graphical user interface (GUI). You interact with it through prompts in the command line.</p>
+<p>Steps to run MATXCOM:</p>
+<ol class="arabic simple">
+<li>Open a Command Prompt or Windows PowerShell window.</li>
+<li>Navigate to the directory where you extracted MATXCOM.</li>
+<li>Run the program by typing:</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.\matxcom</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Press Enter and follow the on-screen prompts.</li>
+</ol>
+</div>
+<div class="section" id="using-matxcom">
+<h2>Using MATXCOM<a class="headerlink" href="#using-matxcom" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="program-prompts-and-inputs">
+<h3>Program Prompts and Inputs<a class="headerlink" href="#program-prompts-and-inputs" title="Permalink to this headline">¶</a></h3>
+<p>When you run MATXCOM, it will prompt you for various inputs to characterize the substance and specify calculation options.</p>
+<p>Below is a description of the prompts you will encounter:</p>
+<ol class="arabic">
+<li><p class="first"><strong>Enter name of substance:</strong></p>
+<blockquote>
+<div><p>Input the name of the material you are analyzing.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Enter density of substance:</strong></p>
+<blockquote>
+<div><p>Provide the density of the substance in g/cm<sup>3</sup>.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Options for characterization of substance:</strong></p>
+<blockquote>
+<div><p>Currently, only option available is for mixture of elements and/or compounds.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>How many components in mixture? Enter number:</strong></p>
+<blockquote>
+<div><p>Specify the number of elements or compounds in your mixture.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Enter atomic number for component &lt;n&gt;:</strong></p>
+<blockquote>
+<div><p>For each component, input the atomic number (Z) of the element. Repeat for all components.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Enter fraction by weight for component &lt;n&gt;:</strong></p>
+<blockquote>
+<div><p>Input the weight fraction of each component. Ensure that the sum of all weight fractions equals 1.0</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Options for accepting or rejecting composition data:</strong></p>
+<blockquote>
+<div><p>Choose whether to accept or re-enter the composition data.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Options for energy list for output data:</strong></p>
+<blockquote>
+<div><p>Currently, only option available is a predefined energy grid.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Specify file on which output (cross-section table) is to be stored:</strong></p>
+<blockquote>
+<div><p>Provide a filename for the output data (e.g., <code class="docutils literal notranslate"><span class="pre">output.csv</span></code>). You can include the path if you wish to save it in a different directory.</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="using-an-input-file">
+<h2>Using an Input File<a class="headerlink" href="#using-an-input-file" title="Permalink to this headline">¶</a></h2>
+<p>For convenience, you can prepare an input file with all the required inputs and run MATXCOM using this file. This is particularly useful for repeated calculations or automating the process.</p>
+<div class="section" id="creating-an-input-file">
+<h3>Creating an Input File<a class="headerlink" href="#creating-an-input-file" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Open a text editor (e.g., Notepad).</li>
+<li>Enter the required inputs, each on a new line, as shown in the example below.</li>
+<li>Save the file (e.g., <code class="docutils literal notranslate"><span class="pre">input.txt</span></code>).</li>
+</ol>
+</div>
+<div class="section" id="example-input-file">
+<h3>Example Input File<a class="headerlink" href="#example-input-file" title="Permalink to this headline">¶</a></h3>
+<p>Here is an example input file for MATXCOM using the composition of Boron Frits-baryte Concrete.</p>
+<p><strong>Density:</strong> 3.100000 g/cm<sup>3</sup></p>
+<p><strong>Composition:</strong></p>
+<table border="1" class="colwidths-auto docutils align-center">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head">Photon ZA</th>
+<th class="head">Weight Fraction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>H</td>
+<td>1000</td>
+<td>0.005626</td>
+</tr>
+<tr class="row-odd"><td>B</td>
+<td>5000</td>
+<td>0.010449</td>
+</tr>
+<tr class="row-even"><td>O</td>
+<td>8000</td>
+<td>0.339596</td>
+</tr>
+<tr class="row-odd"><td>F</td>
+<td>9000</td>
+<td>0.002311</td>
+</tr>
+<tr class="row-even"><td>Na</td>
+<td>11000</td>
+<td>0.012157</td>
+</tr>
+<tr class="row-odd"><td>Mg</td>
+<td>12000</td>
+<td>0.002311</td>
+</tr>
+<tr class="row-even"><td>Al</td>
+<td>13000</td>
+<td>0.006430</td>
+</tr>
+<tr class="row-odd"><td>Si</td>
+<td>14000</td>
+<td>0.033256</td>
+</tr>
+<tr class="row-even"><td>S</td>
+<td>16000</td>
+<td>0.091932</td>
+</tr>
+<tr class="row-odd"><td>K</td>
+<td>19000</td>
+<td>0.001005</td>
+</tr>
+<tr class="row-even"><td>Ca</td>
+<td>20000</td>
+<td>0.062896</td>
+</tr>
+<tr class="row-odd"><td>Mn</td>
+<td>25000</td>
+<td>0.000201</td>
+</tr>
+<tr class="row-even"><td>Fe</td>
+<td>26000</td>
+<td>0.022003</td>
+</tr>
+<tr class="row-odd"><td>Zn</td>
+<td>30000</td>
+<td>0.006631</td>
+</tr>
+<tr class="row-even"><td>Ba</td>
+<td>56000</td>
+<td>0.403195</td>
+</tr>
+<tr class="row-odd"><td>Total</td>
+<td>&#160;</td>
+<td>1.000000</td>
+</tr>
+</tbody>
+</table>
+<p>The contents of the input file should be as the following:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Concrete, Boron Frits-baryte</span>
+<span class="go">3.100000</span>
+<span class="go">1</span>
+<span class="go">15</span>
+<span class="go">1</span>
+<span class="go">0.005626</span>
+<span class="go">5</span>
+<span class="go">0.010449</span>
+<span class="go">8</span>
+<span class="go">0.339596</span>
+<span class="go">9</span>
+<span class="go">0.002311</span>
+<span class="go">11</span>
+<span class="go">0.012157</span>
+<span class="go">12</span>
+<span class="go">0.002311</span>
+<span class="go">13</span>
+<span class="go">0.006430</span>
+<span class="go">14</span>
+<span class="go">0.033256</span>
+<span class="go">16</span>
+<span class="go">0.091932</span>
+<span class="go">19</span>
+<span class="go">0.001005</span>
+<span class="go">20</span>
+<span class="go">0.062896</span>
+<span class="go">25</span>
+<span class="go">0.000201</span>
+<span class="go">26</span>
+<span class="go">0.022003</span>
+<span class="go">30</span>
+<span class="go">0.006631</span>
+<span class="go">56</span>
+<span class="go">0.403195</span>
+<span class="go">1</span>
+<span class="go">1</span>
+<span class="go">output.csv</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The lines correspond to the prompts in the order MATXCOM expects them.</li>
+<li>Ensure that there are no extra blank lines or missing inputs in your file.</li>
+<li>The program will read inputs line by line, so the order and completeness of the inputs are crucial.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="running-matxcom-with-an-input-file">
+<h3>Running MATXCOM with an Input File<a class="headerlink" href="#running-matxcom-with-an-input-file" title="Permalink to this headline">¶</a></h3>
+<p><strong>Using Windows PowerShell</strong></p>
+<ol class="arabic simple">
+<li>Open Windows PowerShell.</li>
+<li>Navigate to the directory containing <code class="docutils literal notranslate"><span class="pre">matxcom.exe</span></code> and your input file <code class="docutils literal notranslate"><span class="pre">input.txt</span></code>.</li>
+<li>Run the following command:</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Get-Content input.txt | .\matxcom</span>
+</pre></div>
+</div>
+<p><strong>Using Command Prompt</strong></p>
+<ol class="arabic simple">
+<li>Open Command Prompt.</li>
+<li>Navigate to the directory containing <code class="docutils literal notranslate"><span class="pre">matxcom.exe</span></code> and your input file <code class="docutils literal notranslate"><span class="pre">input.txt</span></code>.</li>
+<li>Run the following command:</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.\matxcom &lt; input.txt</span>
+</pre></div>
+</div>
+<p>An output file will be created contining the calculated data. The name and location of the output file will as designated in the input of the program. The output data is comma seperated and it makes sense to save it with an extension <code class="docutils literal notranslate"><span class="pre">.csv</span></code>. This file can be opened in Excel or MATLAB for post-processing.</p>
+</div>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>If you use MATXCOM in your research, please cite the associated publication:</p>
+<ul class="simple">
+<li>TBA</li>
+</ul>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This project is licensed under the <a class="reference external" href="https://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</a> license.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">MATXCOM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, S. Islam.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
