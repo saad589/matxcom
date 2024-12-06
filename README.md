@@ -22,7 +22,10 @@ Download the latest release and follow the input format specified in the [User G
 ## Citation
 If you use MATXCOM in your research, please cite the associated publication:
 
-Saad Islam, "MATXCOM—an x-ray/gamma-ray attenuation calculator for arbitrary materials based on EPICS2023 evaluated photon data library," *Radiation Physics and Chemistry*, 2024. DOI: [doi.org/10.1016/j.radphyschem.2024.112433](https://doi.org/10.1016/j.radphyschem.2024.112433)
+Islam, Saad. 'MATXCOM—an x-Ray/Gamma-Ray Attenuation Calculator for Arbitrary Materials Based on EPICS2023 Evaluated Photon Data Library'. *Radiation Physics and Chemistry*, vol. 229, 2025, p. 112433, [https://doi.org/10.1016/j.radphyschem.2024.112433](https://doi.org/10.1016/j.radphyschem.2024.112433).
+
+Full-text available on [ResearchGate](https://www.researchgate.net/publication/386224289_MATXCOM-an_x-raygamma-ray_attenuation_calculator_for_arbitrary_materials_based_on_EPICS2023_evaluated_photon_data_library). 
+
 
 ## License
 This project is licensed under the [Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0/) license.
