@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using MATXCOM &mdash; MATXCOM User&#39;s Guide MATXCOM v0.3-alpha - Initial Pre-release documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=96dde6e7"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="MATXCOM Installation Guide" href="user_guide_install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MATXCOM User's Guide
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="user_guide_install.html">MATXCOM Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using MATXCOM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#answering-prompts">Answering Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-an-input-file">Using an Input File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-a-wrapper">Using a Wrapper</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MATXCOM User's Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Using MATXCOM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/user_guide_use.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-matxcom">
+<h1>Using MATXCOM<a class="headerlink" href="#using-matxcom" title="Permalink to this heading"></a></h1>
+<p>Once you have completed the installation, you can use the program in following ways:</p>
+<ol class="arabic simple">
+<li><p>Interact by directly aswering on-screen prompts through a command line interface.</p></li>
+<li><p>Prepare an input file beforehand and run the program againt hte insput file through a command line interface.</p></li>
+<li><p>Use a wrapper function to run the program inside MATLAB or Python environment.</p></li>
+</ol>
+<section id="answering-prompts">
+<h2>Answering Prompts<a class="headerlink" href="#answering-prompts" title="Permalink to this heading"></a></h2>
+<p>MATXCOM is a command-line program and does not a graphical user interface (GUI). User interaction is made with prompts through a command line interface.</p>
+<p>Steps to run MATXCOM:</p>
+<ol class="arabic simple">
+<li><p>Open a Command Prompt or Windows PowerShell window.</p></li>
+<li><p>Navigate to the directory where you extracted the contents of the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p></li>
+<li><p>Run the program by typing:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.\matxcom</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Press Enter.</p></li>
+<li><p>When you run MATXCOM, it will prompt you for various inputs to characterize the substance and specify calculation options.</p></li>
+</ol>
+<p>Below is a description of the prompts for MATXCOM:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>No.</p></th>
+<th class="head"><p><strong>Prompt</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Enter name of substance</p></td>
+<td><p>Input the name of the material you are analyzing.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Enter density of substance</p></td>
+<td><p>Provide the density of the substance in g/cm<sup>3</sup></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Options for characterization of
+substance</p></td>
+<td><p>Currently, only option available is for mixture of elements and/or
+compounds.</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>How many components in mixture?
+Enter number</p></td>
+<td><p>Specify the number of elements or compounds in your mixture.</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Enter atomic number for component &lt;n&gt;</p></td>
+<td><p>For each component, input the atomic number (Z) of the element.
+Repeat for all components.</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Enter fraction by weight for
+component &lt;n&gt;</p></td>
+<td><p>Input the weight fraction of each component. Ensure that the sum of all
+weight fractions equals 1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Options for accepting or rejecting
+composition data</p></td>
+<td><p>Choose whether to accept or re-enter the composition data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Options for energy list for output
+data</p></td>
+<td><p>Currently, only option available is a predefined energy grid.</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Specify file on which output
+(cross-section table) is to be stored</p></td>
+<td><p>Provide a filename for the output data (e.g., <code class="docutils literal notranslate"><span class="pre">output.csv</span></code>). You can
+include the path if you wish to save it in a different location.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="using-an-input-file">
+<h2>Using an Input File<a class="headerlink" href="#using-an-input-file" title="Permalink to this heading"></a></h2>
+<p>Alternatively, you can prepare an input file with all the required inputs and run MATXCOM using this file. The input file contains the data that you’d give to the program if you were answering the prompts. This is particularly useful for repeated calculations or automating the process.</p>
+<p><strong>Creating an Input File</strong></p>
+<ol class="arabic simple">
+<li><p>Open a text editor (e.g., Notepad).</p></li>
+<li><p>Enter the required inputs, each on a new line, as shown in the example below.</p></li>
+<li><p>Save the file (e.g., <code class="docutils literal notranslate"><span class="pre">input.txt</span></code>) on the same directory as the program.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The lines correspond to the prompts in the order MATXCOM expects them.</p></li>
+<li><p>Ensure that there are no extra blank lines or missing inputs in your file.</p></li>
+<li><p>The program will read inputs line by line, so the order and completeness of the inputs are crucial.</p></li>
+</ul>
+</div>
+<p>Here is an example input file for MATXCOM using the composition of Boron Frits-baryte Concrete:</p>
+<img alt="Input File" class="align-center" src="_images/input.drawio.svg" /><p><strong>Running MATXCOM with the Input File</strong></p>
+<ul>
+<li><p>Using Windows PowerShell</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open Windows PowerShell.</p></li>
+<li><p>Navigate to the directory containing <code class="docutils literal notranslate"><span class="pre">matxcom.exe</span></code> and your input file <code class="docutils literal notranslate"><span class="pre">input.txt</span></code>.</p></li>
+<li><p>Run the following command:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Get-Content input.txt | .\matxcom</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p>Using Command Prompt</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open Command Prompt.</p></li>
+<li><p>Navigate to the directory containing <code class="docutils literal notranslate"><span class="pre">matxcom.exe</span></code> and your input file <code class="docutils literal notranslate"><span class="pre">input.txt</span></code>.</p></li>
+<li><p>Run the following command:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.\matxcom &lt; input.txt</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<p>An output file will be created contining the calculated data. The name and location of the output file will as designated in the input of the program. The output data is comma seperated and it makes sense to save it with an extension <code class="docutils literal notranslate"><span class="pre">.csv</span></code>. This file can be opened in Excel or MATLAB for post-processing.</p>
+</section>
+<section id="using-a-wrapper">
+<h2>Using a Wrapper<a class="headerlink" href="#using-a-wrapper" title="Permalink to this heading"></a></h2>
+<p>The third option to use MATXCOM is using a wrapper function. By calling this wrapper function, MATXCOM can be run inside a programming environment like MATLAB or Python. Please check the repository for available wrapper functions.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="user_guide_install.html" class="btn btn-neutral float-left" title="MATXCOM Installation Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, S. Islam.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
