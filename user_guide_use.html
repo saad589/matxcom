@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using MATXCOM &mdash; MATXCOM User&#39;s Guide MATXCOM v1.0 documentation</title>
+  <title>Using MATXCOM &mdash; MATXCOM User&#39;s Guide MATXCOM v1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -14,7 +14,7 @@
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d04e7c98"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=7436f881"></script>
       <script src="_static/doctools.js?v=888ff710"></script>
       <script src="_static/sphinx_highlight.js?v=4825356b"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -118,47 +118,47 @@
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
 <td><p>Enter name of substance</p></td>
-<td><p>Input the name of the material you are analyzing.</p></td>
+<td><p>Enter a name or label for the material you are analyzing.</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>Enter density of substance</p></td>
-<td><p>Provide the density of the substance in g/cm<sup>3</sup>.</p></td>
+<td><p>Provide the physical density of the material in g/cm<sup>3</sup>.</p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
 <td><p>Options for characterization of substance</p></td>
-<td><p>Currently, only option available is for mixture of elements.</p></td>
+<td><p>Currently, the only option available is to define the substance as a mixture of elements and/or compounds.</p></td>
 </tr>
 <tr class="row-odd"><td><p>4</p></td>
 <td><p>How many components in mixture?</p></td>
-<td><p>Specify the number of elements in your mixture.</p></td>
+<td><p>Specify the number of components (elements or compounds) that make up the mixture.</p></td>
 </tr>
 <tr class="row-even"><td><p>5</p></td>
 <td><p>Choose fraction by weight or mol</p></td>
-<td><p>Specify whether you want to input composition data as fraction of weight or mol.</p></td>
+<td><p>Indicate whether the composition will be provided in terms of weight fractions or mole fractions.</p></td>
 </tr>
 <tr class="row-odd"><td><p>6</p></td>
-<td><p>Enter atomic number for component &lt;n&gt;</p></td>
-<td><p>For each component, input the atomic number (Z) of the element. Repeat for all components.</p></td>
+<td><p>Enter chemical symbol or formula for component &lt;n&gt;</p></td>
+<td><p>For each component, enter its chemical symbol (e.g., <code class="docutils literal notranslate"><span class="pre">Pb</span></code>) or formula (e.g., <code class="docutils literal notranslate"><span class="pre">H2O</span></code>, <code class="docutils literal notranslate"><span class="pre">Fe2O3</span></code>). Repeat for all components in the mixture.</p></td>
 </tr>
 <tr class="row-even"><td><p>7</p></td>
 <td><p>Enter fraction by weight/mol for component &lt;n&gt;</p></td>
-<td><p>Input the weight/mol fraction of each component. Ensure that the sum of all weight/mol fractions equals 1.0.</p></td>
+<td><p>Provide the weight or mole fraction of each component. Ensure the total adds up to 1.0. If not, the program will internally normalize the values.</p></td>
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
 <td><p>Options for accepting or rejecting composition data</p></td>
-<td><p>Choose whether to accept or re-enter the composition data.</p></td>
+<td><p>Choose whether to accept or refect the composition data.</p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
 <td><p>Options for energy list for output data</p></td>
-<td><p>Choose from predefined energy grids. There are options for standard and extended energy grid along with grids based on characteristic X-rays and photon energies from different radioactive isotopes.</p></td>
+<td><p>Select a predefined energy grid. Options include standard, extended, and grids based on characteristic X-rays and photon emissions from various radioactive isotopes.</p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
 <td><p>Options for cross-section library selection</p></td>
-<td><p>Choose from available photoatomic cross-section libraries on the calculations will be based.</p></td>
+<td><p>Select which photon data library to use for calculations.</p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
 <td><p>Specify file on which output is to be stored</p></td>
-<td><p>Provide a filename for the output data (e.g., <code class="docutils literal notranslate"><span class="pre">output</span></code>). You can include the path if you wish to save it in a different location.</p></td>
+<td><p>Provide a name for the output file (e.g., <code class="docutils literal notranslate"><span class="pre">output</span></code>). The file will be saved in <cite>.xlsx</cite> format. You may also specify a full path to save it in a different location.</p></td>
 </tr>
 </tbody>
 </table>
