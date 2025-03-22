@@ -7,10 +7,11 @@ MATXCOM is a specialized program developed for the calculation of x-ray and gamm
 - Linear attenuation coefficient (LAC)
 - Half and tenth value layers (HVL and TVL)
 - Mean free path (MFP)
-- Total atomic and electronic cross-sections (ACS and ECS)
 - Effective atomic number (Z<sub>eff</sub>)
+- Total atomic and electronic cross-sections (ACS and ECS)
 - Effective electron density (N<sub>eff</sub>)
 - Effective conductivity (C<sub>eff</sub>)
+- Geometric progression fitting parameters (a, b, c, d, and X<sub>k</sub>)
 - Energy absorption and exposure buildup factors (EABF and EBF)
 
 ## Installation
@@ -25,7 +26,6 @@ If you use MATXCOM in your research, please cite the associated publication:
 Islam, Saad. "MATXCOM—an x-Ray/Gamma-Ray Attenuation Calculator for Arbitrary Materials Based on EPICS2023 Evaluated Photon Data Library". *Radiation Physics and Chemistry*, vol. 229, 2025, p. 112433, [https://doi.org/10.1016/j.radphyschem.2024.112433](https://doi.org/10.1016/j.radphyschem.2024.112433).
 
 Full-text available on [ResearchGate](https://www.researchgate.net/publication/386224289_MATXCOM-an_x-raygamma-ray_attenuation_calculator_for_arbitrary_materials_based_on_EPICS2023_evaluated_photon_data_library). 
-
 
 ## License
 This project is licensed under the [Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0/) license.
