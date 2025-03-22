@@ -14,6 +14,8 @@ MATXCOM is a specialized program developed for the calculation of x-ray and gamm
 - Geometric progression fitting parameters (a, b, c, d, and X<sub>k</sub>)
 - Energy absorption and exposure buildup factors (EABF and EBF)
 
+> **Note:** The latest release also includes support for the XCOM/NIST Standard Reference Database 8 (XGAM) cross-section library as an alternative to EPICS2023/EPDL.
+
 ## Installation
 The compiled version of MATXCOM is available in the [Releases](https://github.com/saad589/matxcom/releases) section. Simply download the file and follow the installation guide provided in the [User's Guide](https://saad589.github.io/matxcom/).
 
