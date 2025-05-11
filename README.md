@@ -1,6 +1,7 @@
 # MATXCOM—an x-ray/gamma-ray attenuation calculator for arbitrary materials
 
 [![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC%20BY--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nd/4.0/)
+[![Try Web App](https://img.shields.io/badge/Try%20Online-MATXCOM-brightgreen.svg)](https://matxcom.net/)
 
 MATXCOM is a specialized program developed for the calculation of x-ray and gamma-ray interaction cross-sections and attenuation parameters for arbitrary materials. Based on the EPICS2023 evaluated photon data library (EPDL), MATXCOM calculates the following properties:
 - Mass attenuation coefficient (MAC)
@@ -15,6 +16,8 @@ MATXCOM is a specialized program developed for the calculation of x-ray and gamm
 - Energy absorption and exposure buildup factors (EABF and EBF)
 
 > **Note:** The latest release also includes support for the XCOM/NIST Standard Reference Database 8 (XGAM) data library as an alternative to EPICS2023/EPDL.
+
+> **Web Version Now Available!** MATXCOM can now be used directly from web browser: [Launch Web App](https://matxcom.net/). This is the most user-friendly and recommended way to use MATXCOM (same backend as the command-line version).
 
 ## Installation
 The compiled version of MATXCOM is available in the [Releases](https://github.com/saad589/matxcom/releases) section. Simply download the file and follow the installation guide provided in the [User's Guide](https://saad589.github.io/matxcom/).
